@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/"
+    >
+
+
+    <Switch
+        android:id="@+id/Fan1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="120dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Fan 1"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:id="@+id/Fan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fan1"
+        android:layout_alignLeft="@+id/Fan1"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="120dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Fan 2"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:id="@+id/Fan3"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fan2"
+        android:layout_alignLeft="@+id/Fan2"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Fan 3"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:id="@+id/Fan4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fan3"
+        android:layout_alignLeft="@+id/Fan3"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Fan 4"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:id="@+id/Fan5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fan4"
+        android:layout_alignLeft="@+id/Fan4"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Fan 5"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:id="@+id/Fan6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fan5"
+        android:layout_alignLeft="@+id/Fan5"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Fan 6"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:id="@+id/Tubelight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Fan6"
+        android:layout_alignLeft="@+id/Fan6"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="58dp"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="Tubelight"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Button
+        android:id="@+id/getBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="100dp"
+        android:text="Get" />
+
+</LinearLayout>
