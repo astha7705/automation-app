@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/"
+    android:background="@drawable/bcg77"
     >
 
 
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:checked="true"
         android:switchMinWidth="56dp"
         android:text="Fan 1"
@@ -27,7 +27,7 @@
         android:layout_below="@+id/Fan1"
         android:layout_alignLeft="@+id/Fan1"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="30dp"
         android:checked="true"
         android:switchMinWidth="56dp"
         android:text="Fan 2"
@@ -36,7 +36,7 @@
 
     <Switch
         android:id="@+id/Fan3"
-        android:layout_width="104dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Fan2"
         android:layout_alignLeft="@+id/Fan2"
@@ -111,5 +111,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="100dp"
         android:text="Get" />
+
+
 
 </LinearLayout>
