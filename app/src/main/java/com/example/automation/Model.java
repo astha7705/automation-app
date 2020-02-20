@@ -3,21 +3,17 @@ package com.example.automation;
 public class Model {
 
 
-    private String notification_individual_chat;
+    private String status;
 
 
     public Model() {
     }
 
-    public Model(String notification_individual_chat) {
-        this.notification_individual_chat = notification_individual_chat;
+    public String getStatus() {
+        return status;
     }
 
-    public String getNotification_individual_chat() {
-        return notification_individual_chat;
-    }
-
-    public void setNotification_individual_chat(String notification_individual_chat) {
-        this.notification_individual_chat = notification_individual_chat;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

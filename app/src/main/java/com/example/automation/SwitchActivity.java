@@ -2,6 +2,7 @@ package com.example.automation;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -40,7 +41,7 @@ public class SwitchActivity extends AppCompatActivity {
 
         btnGet = (Button)findViewById(R.id.getBtn);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+      mDatabase = FirebaseDatabase.getInstance().getReference();
 
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,43 +79,46 @@ public class SwitchActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Fan1 -  " + str1 + " \n" + "Fan2 - " + str2+"Fan3 -  " + str3 + " \n" +"Fan4 -  " + str4 + " \n" +"Fan5 -  " + str5 + " \n" +"Fan6 -  " + str6 + " \n" +"TubeLight -  " + str7 + " \n",Toast.LENGTH_SHORT).show();
 
 
-                mDatabase.child("user_profile_settings").addValueEventListener(new ValueEventListener() {
+                mDatabase.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
 
                         // Use The Model Class To Get The Data
-                        final Model myProfileSettingsModel = dataSnapshot.getValue(Model.class);
+                        final Model myModel = dataSnapshot.getValue(Model.class);
 
-                        String notificationIndividualChat = myProfileSettingsModel.getNotification_individual_chat();
+                        String notificationIndividualChat = myModel.getStatus();
 
-                        if (notificationIndividualChat.equals("0")) {
-                            Fn1.setChecked(true);
+                        Log.i("title",notificationIndividualChat);
 
-                            Fn1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                        if (notificationIndividualChat.equals("0")) {
+//                            Fn1.setChecked(true);
 
-                                @Override
-                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-
-                                    mDatabase.child("user_profile_settings").child("notification_individual_chat").setValue("1");
-
-                                }
-                            });
-                        }
-                        if (notificationIndividualChat.equals("1")) {
-                            Fn1.setChecked(false);
-
-                            Fn1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                                @Override
-                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-
-                                    mDatabase.child("user_profile_settings").child("notification_individual_chat").setValue("0");
-
-                                }
-                            });
-                        }
+//                            Fn1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//
+//                                @Override
+//                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//
+//
+//                                    mDatabase.child("user_profile_settings").child("notification_individual_chat").setValue("1");
+//
+//                                }
+//                            });
+//                        }
+//                        if (notificationIndividualChat.equals("1")) {
+//                            Fn1.setChecked(false);
+//
+//                            Fn1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                                @Override
+//                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//
+//
+//                                    mDatabase.child("user_profile_settings").child("notification_individual_chat").setValue("0");
+//
+//
+//                                }
+//                            });
+//                        }
 
                     }
 

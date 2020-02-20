@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        FirebaseFirestore fstore;
+//        FirebaseFirestore fstore;
 
 
         signInButton = findViewById((R.id.sign_in_button));
